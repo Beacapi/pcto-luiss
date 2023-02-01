@@ -9,23 +9,40 @@ Welcome to GDB Online.
 #include <stdio.h>
 
 int main()
-{
-    int numero1;
-    int numero2;
-    int numero3;
-    printf ("inserire tre numeri");
-    scanf ("%d%d%d", &numero1,&numero2,&numero3);
+{ 
+    int prezzo;
+    int quantita;
+    float totale;
     
-  
-  if (numero1-numero2==numero2-numero3) {
-      printf ("numeri considerati in progressione aritmetica");
-  }
-  else {
-  printf ("numeri non considerati in progressione aritmetica");
-  }
-  
-
-   
- 
-    return 0;
+    printf ("inserisci quantita da acquistare\n");
+    
+    prezzo=5;
+    quantita=1;
+    
+    while (quantita>0) {
+        scanf ("%d", &quantita);
+        if (quantita >30) {
+        totale= quantita*prezzo*(1-0.1); }
+        
+        else if (quantita >50) {
+            totale=quantita*prezzo*(1-0.15); }
+        
+        else  {
+            totale=quantita*prezzo; }
+        printf ("il totale da pagare è %f", totale);
+    }
+        
+  return 0;      
 }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
