@@ -8,27 +8,25 @@ Welcome to GDB Online.
 *******************************************************************************/
 #include <stdio.h>
 
+int fattoriale(int n) {
+   
+    int tot=1;
+    while (n>=1) {
+        tot=tot*n;
+        n=n-1;
+    }
+    
+    return tot;
+}
+
 int main()
 {
-    float celsius;
-    float fahrenheit;
-    float kelvin;
-    printf ("inserire una temperatura in celsius\n");
-    scanf ("%f", &celsius);
-  
-  
-    if (celsius < -273.15) {
-    printf ("errore nel calcolatore\n");
-    }
-    else {
-        fahrenheit= (9/5)*celsius + 32;
-        kelvin= celsius + 273.15;
-        printf ("la temperatura in kelvin e %f \n", kelvin);
-        printf ("la temperatura in fahrenheit e %f \n", fahrenheit);
-        
-    }
-
+    int n;
    
- 
+    printf ("prendere un numero \n");
+    scanf ("%d", &n);
+    
+    printf ("finale %d\n", fattoriale(n));
+
     return 0;
 }
