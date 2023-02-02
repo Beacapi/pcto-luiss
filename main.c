@@ -7,23 +7,25 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
+void fattoriale(int n) {
+   
+    int tot=1;
+    while (n>=1) {
+        tot=tot*n;
+        n=n-1;
+    }
+    printf ("finale %d\n",tot);
+
+}
 
 int main()
 {
-      printf ("inserisci due numeri");
-    int numero1;
-    int numero2;
-    scanf ("%d", &numero1);
-    scanf ("%d", &numero2);
-  
-    if (numero1 % numero2==0) {
-    printf ("numero1 multiplo di numero2");
-    }
-    else {
-    printf ("numero1 non  multiplo di numero2"); }
- 
-    
-    
+    int n;
+
+    printf ("prendere un numero \n");
+    scanf ("%d", &n);
+    fattoriale (n);
 
     return 0;
 }
+
