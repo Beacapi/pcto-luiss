@@ -1,32 +1,25 @@
 /******************************************************************************
 
 Welcome to GDB Online.
-  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
-  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
-  Code, Compile, Run and Debug online from anywhere in world.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
 
 *******************************************************************************/
 #include <stdio.h>
 
-int main() {
-int numero;
-int div;
-int conta;
-div=1;     // div= contatore che indica i numeri da considerare
-conta=0;  // conta= quantità di divisori
-	printf("inserisci il numero");
-        scanf("%d", &numero);
+int main()
+{   
     
+    int i;
+    i=0;
+    char str[]="ciao";
+   
+    while(str[i]!='\0')
+    {
+    i=i+1;
+    }
+    printf ("stampare la i di str%d\n",i);
 
-	while(conta<3 && div<=numero/2)
-	{
-	   if(numero%div==0) {
-			conta=conta+1;	}
-		div=div+1;
-	}
-	if (conta==1) {
-	   printf("il numero e' primo\n "); }
-	else {
-	   printf("il numero non e' primo\n "); }
-	   
+    return 0;
 }
