@@ -7,25 +7,46 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-void fattoriale(int n) {
-   
-    int tot=1;
-    while (n>=1) {
-        tot=tot*n;
-        n=n-1;
-    }
-    printf ("finale %d\n",tot);
 
+void ft_ft (int*array, int dimensione) 
+{
+    int t;
+    int temp;
+    int z;
+    
+    temp=0;
+    t=0;
+
+    while (t<dimensione-1) 
+    {   z=t+1;
+        while (z<dimensione) 
+        {
+        if (array[t]>array[z]) 
+            {
+            temp=array[t];
+            array[t]=array[z];
+            array[z]=temp;
+        }
+        z=z+1; //cambia a ogni ciclo
+      }
+     t=t+1; 
+  }
+  
 }
 
 int main()
 {
-    int n;
-
-    printf ("prendere un numero \n");
-    scanf ("%d", &n);
-    fattoriale (n);
-
+  int array[]= {2,7,9,4,11,3};
+  int dimensione=6;
+  int t=0;
+  
+  ft_ft (array, dimensione);
+  while(t<dimensione)
+  {
+  printf ("%d\n", array[t]);
+  t=t+1;
+  }
+  
+  
     return 0;
 }
-
